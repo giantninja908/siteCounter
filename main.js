@@ -1,19 +1,7 @@
-if(!localStorage.getItem('visit')) {
-  populateStorage();
+if (localStorage.clickcount) {
+    localStorage.clickcount = Number(localStorage.clickcount) + 1;
 } else {
-  setStyles();
+    localStorage.clickcount = 1;
 }
-
-function populateStorage() {
-if(!localStorage.getItem('visit')){
-  localStorage.setItem('visit', 1);
-  }else{
-    localStorage.setItem('visit', localStorage.getItem('visit')+1);
-  }
-  setStyles();
-}
-
-function setStyles(){
-  var h = document.getElementById("test")
-  h.innerHTML = "Times visited: "+localStorage.getItem('visit').toString()
-}
+document.getElementById("test").innerHTML = "You have clicked the button " +
+localStorage.clickcount + " time(s).";
