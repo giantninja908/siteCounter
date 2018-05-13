@@ -3,5 +3,5 @@ if (localStorage.clickcount) {
 } else {
     localStorage.clickcount = 1;
 }
-document.getElementById("test").innerHTML = "You have clicked the button " +
+document.getElementById("test").innerHTML = "You have visited this page " +
 localStorage.clickcount + " time(s).";
